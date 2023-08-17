@@ -1,6 +1,6 @@
 import React from 'react'
 import { moveClockwise, moveCounterClockwise } from '../state/action-creators'
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 
 function Wheel(props) {
   return (
@@ -23,8 +23,8 @@ function Wheel(props) {
 
 const mapStateToPops = state => {
   return {
-    id: state.Wheel.id
+    id: state.id
   }
 }
 
-export default connect(mapStateToPops, {moveClockwise, moveCounterClockwise})(Wheel);
+export default connect(mapStateToPops, { moveClockwise, moveCounterClockwise })(Wheel);
