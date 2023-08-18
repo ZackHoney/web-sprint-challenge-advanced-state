@@ -1,25 +1,22 @@
 import { INPUT_CHANGE, MOVE_CLOCKWISE, MOVE_COUNTERCLOCKWISE, RESET_FORM, SET_INFO_MESSAGE, SET_QUIZ_INTO_STATE, SET_SELECTED_ANSWER } from "./action-types"
 
 // ❗ You don't need to add extra action creators to achieve MVP
-export function moveClockwise(e) { 
+export function moveClockwise() { 
   return {
     type: MOVE_CLOCKWISE,
-    payload: e
-  }
+    payload:  payload }
 }
 
-export function moveCounterClockwise(e) { 
+export function moveCounterClockwise() { 
   return {
     type: MOVE_COUNTERCLOCKWISE,
-    payload:e
-  }
+    payload: payload  }
 }
 
-export function selectAnswer(e) { 
+export function selectAnswer() { 
   return {
     type: SET_SELECTED_ANSWER,
-    payload: e
-  }
+    payload:  payload  }
 }
 
 export function setMessage(message) { 
@@ -29,25 +26,23 @@ export function setMessage(message) {
   }
 }
 
-export function setQuiz(e) {
+export function setQuiz() {
   return {
     type: SET_QUIZ_INTO_STATE,
-    payload:e
-  }
+    payload: payload  }
  }
 
-export function inputChange(e) {
+export function inputChange() {
   return {
     type: INPUT_CHANGE,
-    payload: e
+    payload: payload
   }
  }
 
-export function resetForm(e) {
+export function resetForm() {
   return {
     type: RESET_FORM,
-    payload:e
-  }
+    payload: payload  }
  }
 
 // ❗ Async action creators
