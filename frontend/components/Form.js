@@ -9,9 +9,10 @@ export function Form(props) {
   }
 
   const onSubmit = evt => {
-    evt.preventDefault();
-  
-
+    evt.preventDefault()
+      state.form.newQuestion = '',
+      state.form.newTrueAnswer = '',
+      state.form.newFalseAnswer = ''
   }
 
   return (
