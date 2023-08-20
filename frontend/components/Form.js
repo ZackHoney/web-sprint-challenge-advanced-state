@@ -10,9 +10,8 @@ export function Form(props) {
 
   const onSubmit = evt => {
     evt.preventDefault()
-      state.form.newQuestion = '',
-      state.form.newTrueAnswer = '',
-      state.form.newFalseAnswer = ''
+    const answerForm = { false_answer_text, true_answer_text }
+    
   }
 
   return (
