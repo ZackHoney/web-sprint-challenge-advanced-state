@@ -18,12 +18,12 @@ function selectedAnswer(state = initialSelectedAnswerState, action) {
 }
 
 const initialMessageState = ''
-function infoMessage(state = initialMessageState, { type, payload}) {
-  switch(type) {
+function infoMessage(state = initialMessageState, { type, payload }) {
+  switch (type) {
     case SET_INFO_MESSAGE:
       return payload
-      default:
-        return state
+    default:
+      return state
   }
 }
 
