@@ -1,15 +1,27 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { selectAnswer, setQuiz, setMessage } from '../state/action-creators'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { selectAnswer, setMessage, fetchQuiz } from '../state/action-creators';
 
-function Quiz(props) {
+
+function Quiz({ selectAnswer, setMessage, fetchQuiz, quiz, selectedAnswer }) {
+
+
+  useEffect(() => { fetchQuiz(), [] })
+
+  const onSubmit = evt => {
+    evt.preventDefault()
+    const answer = { quiz_id: quiz.quiz_id, selectAnswer: quiz.selectedAnswer.id}
+    postAnswer(answer)
+  }
+
+
   return (
     <div id="wrapper">
       {
         // quiz already in state? Let's use that, otherwise render "Loading next quiz..."
         true ? (
           <>
-            <h2>What is a closure?</h2>
+            <h2>{quiz.quiz_id}</h2>
 
             <div id="quizAnswers">
               <div className="answer selected">

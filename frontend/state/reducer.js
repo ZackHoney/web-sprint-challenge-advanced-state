@@ -56,7 +56,7 @@ function form(state = initialFormState, { type, payload }) {
     case INPUT_CHANGE:
       return payload
     case RESET_FORM:
-      return payload
+      return initialFormState
     default:
       return state
   }
