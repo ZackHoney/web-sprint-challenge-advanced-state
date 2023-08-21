@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 
-function Message({ infoMessage }) {
+const Message = ({ infoMessage }) => {
   return <div id="message">{infoMessage}</div>
 }
 
