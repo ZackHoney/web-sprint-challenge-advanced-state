@@ -21,6 +21,7 @@ export function Form({ postQuiz, inputChange, form }) {
       <input maxLength={50} onChange={onChange} value={form.newQuestion} id="newQuestion" placeholder="Enter question" />
       <input maxLength={50} onChange={onChange} value={form.trueAnswer} id="newTrueAnswer" placeholder="Enter true answer" />
       <input maxLength={50} onChange={onChange} value={form.falseAnswer} id="newFalseAnswer" placeholder="Enter false answer" />
+      {/* Can you use disabled={form.value === '' } */}
       <button id="submitNewQuizBtn" disabled={form.newQuestion.trim().length <= 1 || form.trueAnswer.trim().length <= 1 || form.falseAnwer.trim().length <= 1}>Submit new quiz</button>
     </form>
   )

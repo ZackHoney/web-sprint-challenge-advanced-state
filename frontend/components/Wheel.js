@@ -10,7 +10,7 @@ const Wheel = ({ index, moveClockwise, moveCounterClockwise }) => {
   const handleClickCounterClockwise = () => {
     moveCounterClockwise((index + 5) % 6);
   };
-  
+
   return (
     <div id="wrapper">
       <div id="wheel">
