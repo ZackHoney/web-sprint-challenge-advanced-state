@@ -2,17 +2,17 @@ import { INPUT_CHANGE, MOVE_CLOCKWISE, MOVE_COUNTERCLOCKWISE, RESET_FORM, SET_IN
 import axios from "axios"
 
 // ❗ You don't need to add extra action creators to achieve MVP
-export function moveClockwise() {
+export function moveClockwise(index) {
   return {
     type: MOVE_CLOCKWISE,
-    payload: payload
+    payload: index
   }
 }
 
-export function moveCounterClockwise() {
+export function moveCounterClockwise(index) {
   return {
     type: MOVE_COUNTERCLOCKWISE,
-    payload: payload
+    payload: index
   }
 }
 
